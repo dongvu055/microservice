@@ -4,4 +4,9 @@ server:
 spring:
   webservices:
     path: /review
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/review
+    username: root
+    password: root
 
