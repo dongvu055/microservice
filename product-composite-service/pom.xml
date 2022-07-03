@@ -15,20 +15,24 @@
             <groupId>dongvu.microservice.core</groupId>
             <artifactId>product-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>dongvu.microservice.core</groupId>
             <artifactId>review-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>dongvu.microservice.core</groupId>
             <artifactId>recommendation-service</artifactId>
             <version>0.0.1-SNAPSHOT</version>
-            <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.squareup.okhttp</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>2.7.5</version>
+        </dependency>
+
     </dependencies>
 
     <properties>

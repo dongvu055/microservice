@@ -16,7 +16,7 @@ public class ProductCompositeController {
     }
 
     @GetMapping("/getdata")
-    public List<ProductComposite> getListProductComposite() {
+    public ProductComposite getListProductComposite() {
         return productCompositeService.getListProductComposite();
     }
 
