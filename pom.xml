@@ -46,53 +46,22 @@
     </dependencies>
 
     <build>
-<!--        <pluginManagement>-->
-            <plugins>
-                <!--                Build jar -->
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                    <version>${spring-boot-maven-plugin-version}</version>
-                    <executions>
-                        <execution>
-                            <goals>
-                                <goal>repackage</goal>
-                            </goals>
-                            <configuration>
-                                <classifier>app</classifier>
-                                <mainClass>
-                                    ${project.build.finalName}
-                                </mainClass>
-                            </configuration>
-                        </execution>
-                    </executions>
-                </plugin>
-
-<!--                &lt;!&ndash;              Dockerfile build&ndash;&gt;-->
-<!--                <plugin>-->
-<!--                    <groupId>com.spotify</groupId>-->
-<!--                    <artifactId>dockerfile-maven-plugin</artifactId>-->
-<!--                    <version>1.4.13</version>-->
-<!--                    &lt;!&ndash; Wire up to the default build phases &ndash;&gt;-->
-<!--                    <executions>-->
-<!--                        <execution>-->
-<!--                            <id>default</id>-->
-<!--                            <goals>-->
-<!--                                <goal>-->
-<!--                                    help-->
-<!--                                </goal>-->
-<!--                            </goals>-->
-<!--                        </execution>-->
-<!--                    </executions>-->
-<!--                    <configuration>-->
-<!--                        <repository>dockerfile</repository>-->
-<!--                        <contextDirectory>product-composite-service</contextDirectory>-->
-<!--                        <buildArgs>-->
-<!--                            <JAR_FILE>target/${project.build.finalName}-app.jar</JAR_FILE>-->
-<!--                        </buildArgs>-->
-<!--                    </configuration>-->
-<!--                </plugin>-->
-            </plugins>
-<!--        </pluginManagement>-->
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot-maven-plugin-version}</version>
+                <executions>
+                    <execution>
+                        <configuration>
+                            <classifier>app</classifier>
+                        </configuration>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>
