@@ -8,6 +8,7 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
 
     <artifactId>product-composite-service</artifactId>
     <dependencies>
@@ -40,4 +41,26 @@
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+<!--                <version>${spring-boot-maven-plugin-version}</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <classifier>spring-boot</classifier>-->
+<!--                            <mainClass>-->
+<!--                                dongvu.microservice.productcompositeservice.ProductCompositeApplication-->
+<!--                            </mainClass>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+<!--    </build>-->
 </project>

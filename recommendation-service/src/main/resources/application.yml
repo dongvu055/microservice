@@ -6,6 +6,6 @@ spring:
     path: /recommendation
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/recommendation
+    url: jdbc:mysql://localhost:3307/recommendation
     username: root
     password: root

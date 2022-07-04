@@ -6,7 +6,7 @@ spring:
     path: /review
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/review
+    url: jdbc:mysql://localhost:3308/review
     username: root
     password: root
 
