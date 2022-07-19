@@ -15,7 +15,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.List;
 
 @Service
 @Slf4j
@@ -25,15 +24,15 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
         ProductComposite productComposite = new ProductComposite();
         OkHttpClient okHttpClient = new OkHttpClient();
         Request requestProduct = new Request.Builder()
-                .url("http://localhost:8081/getdata")
+                .url("http://product-service:8081/getdata")
                 .build();
 
         Request requestRecommendation = new Request.Builder()
-                .url("http://localhost:8082/getdata")
+                .url("http://recommendation-service:8082/getdata")
                 .build();
 
         Request requestReview = new Request.Builder()
-                .url("http://localhost:8083/getdata")
+                .url("http://review-service:8083/getdata")
                 .build();
 
         try {
@@ -42,8 +41,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(response.body().string());
             Iterator<JsonNode> elements = jsonNode.elements();
-            while (elements.hasNext())
-            {
+            while (elements.hasNext()) {
                 JsonNode node = elements.next();
                 Product product = new Product();
                 product.setProductId(node.get("productId").asInt());
@@ -57,8 +55,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
             objectMapper = new ObjectMapper();
             jsonNode = objectMapper.readTree(response.body().string());
             elements = jsonNode.elements();
-            while (elements.hasNext())
-            {
+            while (elements.hasNext()) {
                 JsonNode node = elements.next();
                 Recommendation recommendation = new Recommendation();
                 recommendation.setRecommendationId(node.get("recommendationId").asInt());
@@ -74,8 +71,7 @@ public class ProductCompositeServiceImpl implements ProductCompositeService {
             objectMapper = new ObjectMapper();
             jsonNode = objectMapper.readTree(response.body().string());
             elements = jsonNode.elements();
-            while (elements.hasNext())
-            {
+            while (elements.hasNext()) {
                 JsonNode node = elements.next();
                 Review review = new Review();
                 review.setReviewId(node.get("reviewId").asInt());
