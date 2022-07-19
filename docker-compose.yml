@@ -54,7 +54,14 @@ services:
       mysql:
         condition: service_started
 
+#  eureka:
+#    build: spring-cloud/eureka-server
+#    mem_limit: 512m
+#    ports:
+#      - 8761:8761
+
 volumes:
   mysql_data:
     external: true
+
 

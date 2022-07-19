@@ -5,6 +5,7 @@ import dongvu.microservice.reviewservice.service.ReviewService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
 import java.util.List;
 
 @RestController
@@ -18,5 +19,15 @@ public class ReviewController {
     @GetMapping("/getdata")
     public List<Review> getListReviewComposite() {
         return reviewService.getListReview();
+    }
+
+    @GetMapping("/ping")
+    public String test() {
+        try {
+            InetAddress IP = InetAddress.getLocalHost();
+            return "pong: " + IP.getHostAddress();
+        } catch (Exception e) {
+            return e.getMessage();
+        }
     }
 }

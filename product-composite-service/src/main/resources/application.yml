@@ -4,3 +4,5 @@ server:
 spring:
   webservices:
     path: /productcomposite
+  application:
+    name: product-composite
