@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql:3306/product
+    url: jdbc:mysql://mysql:3306/recommendation
     username: root
     password: root
   application:

@@ -19,3 +19,9 @@ eureka:
   instance:
     leaseRenewalIntervalInSeconds: 5
     leaseExpirationDurationInSeconds: 5
+
+http:
+  url:
+    product: http://product
+    recommendation: http://recommendation
+    review: http://review
