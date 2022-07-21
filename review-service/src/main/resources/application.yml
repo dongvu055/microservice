@@ -1,14 +1,5 @@
-server:
-  port: 8083
-
 spring:
-  webservices:
-    path: /review
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql:3306/review
-    username: root
-    password: root
-  application:
-    name: review
+  profiles:
+    active: local
+
 

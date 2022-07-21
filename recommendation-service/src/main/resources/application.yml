@@ -1,13 +1,5 @@
-server:
-  port: 8082
-
 spring:
-  webservices:
-    path: /recommendation
-  datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql:3306/recommendation
-    username: root
-    password: root
-  application:
-    name: recommendation
+  profiles:
+    active: local
+
+
